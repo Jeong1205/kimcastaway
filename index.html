@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>김씨표류기 소개</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body class="no-scroll">
+  <!-- 첫 화면 -->
+  <div id="page1" class="page active">
+    <img id="startBtn" class="center-button" src="images/button.png" alt="버튼" />
+  </div>
+
+  <!-- 두 번째 화면 -->
+  <div id="page2" class="page">
+    <div class="text-wrapper">
+      <img src="images/title.png" alt="타이틀" />
+      <img src="images/subtitle.png" alt="서브타이틀" />
+      <!-- ✅ 슬라이드쇼 -->
+      <div class="slideshow-container">
+        <div class="slide active">
+          <img src="images/howareyou.png" alt="하우아유" />
+        </div>
+        <div class="slide">
+          <img src="images/photo1.png" alt="포토1" />
+        </div>
+        <div class="slide">
+          <img src="images/photo2.png" alt="포토2" />
+        </div>
+        <div class="slide">
+          <img src="images/photo3.png" alt="포토3" />
+        </div>
+        <div class="slide">
+          <img src="images/photo4.png" alt="포토4" />
+        </div>
+        <div class="slide">
+          <img src="images/photo5.png" alt="포토5" />
+        </div>
+      </div>
+
+      <div class="pickone-wrapper">
+        <img src="images/pickone.png" alt="픽원" />
+      </div>
+
+      <div class="kim-row-wrapper">
+        <div class="misterkim-col">
+          <img class="misterkim-img" src="images/misterkimfull.png" alt="미스터김풀" />
+          <img class="aboutmr-img" src="images/aboutmr.png" alt="어바웃미스터" />
+          <img class="island-img" src="images/island.png" alt="아일랜드" />
+        </div>
+        <div class="mrskim-col">
+          <img class="mrskim-img" src="images/mrskim.png" alt="미스터킴" />
+          <img class="aboutmrs-img" src="images/aboutmrs.png" alt="어바웃미스" />
+          <div class="room-img-wrapper">
+            <img class="room-img" src="images/room.png" alt="룸" />
+          </div>
+        </div>
+      </div>
+
+      <div class="kims-row">
+        <img class="mrkims-img" src="images/mrkims.png" alt="미스터킴즈" />
+        <img class="mrskims-img" src="images/mrskims.png" alt="미스킴즈" />
+      </div>
+
+      <!-- ✅ yellow 이미지 -->
+      <div class="yellow-img-wrapper">
+        <img class="yellow-img" src="images/yellow.png" alt="옐로우" />
+      </div>
+      <!-- ✅ help 이미지 -->
+      <div class="help-img-wrapper">
+        <img class="help-img" src="images/help.png" alt="도움" />
+      </div>
+      <!-- ✅ hello 이미지 -->
+      <div class="hello-img-wrapper">
+        <img class="hello-img" src="images/hello.png" alt="헬로" />
+      </div>
+      <!-- ✅ hello2 이미지 -->
+      <div class="hello2-img-wrapper">
+        <img class="hello2-img" src="images/hello2.png" alt="헬로2" />
+      </div>
+      <!-- ✅ sorry 이미지 -->
+      <div class="sorry-img-wrapper">
+        <img class="sorry-img" src="images/sorry.png" alt="소리" />
+      </div>
+      <!-- ✅ cong 이미지 -->
+      <div class="cong-img-wrapper">
+        <img class="cong-img" src="images/cong.png" alt="콩" />
+      </div>
+      <!-- ✅ who 이미지 -->
+      <div class="who-img-wrapper">
+        <img class="who-img" src="images/who.png" alt="후" />
+      </div>
+      <!-- ✅ pink 이미지 -->
+      <div class="pink-img-wrapper">
+        <img class="pink-img" src="images/pink.png" alt="핑크" />
+      </div>
+      <!-- ✅ orange 이미지 -->
+      <div class="orange-img-wrapper">
+        <img class="orange-img" src="images/orange.png" alt="오렌지" />
+      </div>
+      <!-- ✅ 오렌지 그라데이션 -->
+      <div class="orange-gradient"></div>
+      
+      <!-- ✅ watch 이미지 -->
+      <div class="watch-img-wrapper">
+        <a href="https://www.google.com/search?q=%EA%B9%80%EC%94%A8%ED%91%9C%EB%A5%98%EA%B8%B0+%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0&client=safari&sca_esv=b428ec610e3a7588&rls=en&sxsrf=AE3TifObN-SAweyMvTMIdei9TW4fVwiNeg%3A1750809289794&ei=yTpbaPaaMKSSvr0P4trw8Q8&ved=0ahUKEwi2o6buoIuOAxUkia8BHWItPP4Q4dUDCBA&uact=5&oq=%EA%B9%80%EC%94%A8%ED%91%9C%EB%A5%98%EA%B8%B0+%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0&gs_lp=Egxnd3Mtd2l6LXNlcnAiHOq5gOyUqO2RnOulmOq4sCDri6Tsi5zrs7TquLAyDRAjGPAFGIAEGCcYigUyBhAAGAUYHjIIEAAYgAQYogRIsxxQugxY8xpwBHgBkAECmAH9AaABgg-qAQYwLjExLjK4AQPIAQD4AQGYAgqgAscGwgIKEAAYsAMY1gQYR8ICBBAjGCfCAgUQABjvBcICCBAAGKIEGIkFwgIFEAAYgATCAgUQLhiABMICBBAAGB6YAwCIBgGQBgqSBwM0LjagB4ZFsgcDMC42uAemBsIHCTAuMy41LjEuMcgHOA&sclient=gws-wiz-serp" class="watch-link" target="_blank">
+          <img class="watch-img" src="images/watch.png" alt="워치" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

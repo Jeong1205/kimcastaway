@@ -1,0 +1,672 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: sans-serif;
+}
+body.no-scroll {
+  overflow-y: hidden;
+}
+body.scrollable {
+  overflow-y: auto;
+}
+.page {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: none;
+  overflow: hidden;
+}
+.page.active {
+  display: block;
+}
+#page1 {
+  overflow: hidden;
+}
+#page2 {
+  position: relative;
+  min-height: 100vh;
+  overflow-y: visible;
+}
+.background-img {
+  position: fixed;
+  width: 100vw;
+  height: 600px;
+  object-fit: cover;
+  top: 0; left: 0;
+  z-index: 0;
+}
+#page1 .center-button {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  cursor: pointer;
+  z-index: 1;
+}
+#page2 .text-wrapper {
+  position: relative;
+  padding: 40px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-bottom: 300px;
+}
+#page2 .text-wrapper img:first-child {
+  height: 40px;
+  max-width: 245px;
+  margin-bottom: 20px;
+}
+#page2 .text-wrapper img:nth-child(2) {
+  width: 410px;
+  height: 120px;
+  margin-bottom: 40px;
+}
+#page2 .text-wrapper img:nth-child(3) {
+  width: 1350px;
+  height: 590px;
+  margin-bottom: 140px;
+}
+/* pickone */
+#page2 .pickone-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+#page2 .pickone-wrapper img {
+  width: 100px;
+  height: 40px;
+}
+/* kim-row-wrapper */
+#page2 .kim-row-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+#page2 .misterkim-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#page2 .misterkim-img,
+#page2 .aboutmr-img,
+#page2 .island-img {
+  margin-left: 150px !important;
+}
+#page2 .misterkim-img {
+  width: 280px !important;
+  height: auto !important;
+  margin-left: 280px !important;
+  display: block !important;
+  margin-top: 60px;
+}
+#page2 .mrskim-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#page2 .mrskim-img {
+  width: 215px !important;
+  height: 430px !important;
+  margin-right: 300px;
+  display: block !important;
+  margin-top: -40px;
+}
+#page2 .name-img {
+  width: 200px !important;
+  height: 90px !important;
+  display: block !important;
+  margin-left: 300px;
+  margin-top: 10px;
+}
+#page2 .aboutmrs-img {
+  width: 410px !important;
+  height: 130px !important;
+  display: block !important;
+  margin-right: 212px;
+  margin-top: 0px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#page2 .island-img {
+  width: 85px !important;
+  height: 55px !important;
+  display: block !important;
+  margin-left: 360px !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#page2 .room-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+#page2 .room-img {
+  width: 90px !important;
+  height: 55px !important;
+  display: block !important;
+  margin-right: 0px;
+  margin-left: 160px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#page2 .mrkims-img {
+  width: 570px !important;
+  height: auto !important;
+  max-width: none !important;
+  display: block !important;
+  margin-left: 0 !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#page2 .kims-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+#page2 .mrskims-img {
+  width: 600px !important;
+  height: 650px !important;
+  display: inline-block !important;
+  margin-left: 40px;
+  vertical-align: top;
+}
+#page2 .aboutmr-img {
+  width: 410px !important;
+  height: 130px !important;
+  display: block !important;
+  margin-left: 200px !important;
+  margin-top: 15px !important;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* ✅ yellow 이미지 */
+#page2 .yellow-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+#page2 .yellow-img {
+  width: 100px !important;
+  height: auto !important;
+  max-width: none !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ✅ help 이미지 */
+#page2 .help-img {
+  width: 50px !important;
+  height: 25px !important;
+  max-width: none !important;
+  display: block;
+  margin-left: 300px;
+  margin-top: -40px;
+}
+
+/* ✅ hello 이미지 */
+#page2 .hello-img {
+  width: auto !important;
+  height: 25px !important;
+  max-width: none !important;
+  display: block;
+  margin-left: 800px;
+  margin-top: 80px;
+}
+
+/* ✅ hello2 이미지 */
+#page2 .hello2-img {
+  width: auto !important;
+  height: 25px !important;
+  max-width: none !important;
+  display: block;
+  margin-left: 100px;
+  margin-top: 120px;
+}
+
+/* ✅ sorry 이미지 */
+#page2 .sorry-img {
+  width: auto !important;
+  height: 25px !important;
+  max-width: none !important;
+  display: block;
+  margin-left: 900px;
+  margin-top: 20px;
+}
+
+/* ✅ cong 이미지 */
+#page2 .cong-img {
+  width: auto !important;
+  height: 23px !important;
+  max-width: none !important;
+  display: block;
+  position: absolute;
+  right: 35px;
+  margin-top: 80px;
+}
+
+/* ✅ who 이미지 */
+#page2 .who-img {
+  width: auto !important;
+  height: 25px !important;
+  max-width: none !important;
+  display: block;
+  position: absolute;
+  left: 40px;
+  margin-top: 80px;
+}
+
+/* ✅ pink 이미지 */
+#page2 .pink-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+#page2 .pink-img {
+  width: 100px !important;
+  height: auto !important;
+  max-width: none !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ✅ orange 이미지 */
+#page2 .orange-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 160px;
+}
+#page2 .orange-img {
+  width: 100px !important;
+  height: auto !important;
+  max-width: none !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ✅ 오렌지 그라데이션 */
+.orange-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to top, #ff6b35, transparent);
+  pointer-events: none;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  margin: 0;
+  padding: 0;
+}
+
+.orange-gradient.show {
+  opacity: 1;
+}
+
+/* ✅ watch 이미지 */
+.watch-img-wrapper {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.watch-img {
+  height: 25px !important;
+  width: auto !important;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.watch-link {
+  text-decoration: none;
+  display: block;
+}
+
+.watch-link:hover {
+  opacity: 0.8;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  #page2 .misterkim-img {
+    width: 250px !important;
+    height: auto !important;
+    margin-left: 200px !important;
+  }
+  
+  #page2 .mrskim-img {
+    width: 200px !important;
+    height: auto !important;
+    margin-right: 200px;
+  }
+  
+  #page2 .aboutmr-img {
+    width: 350px !important;
+    height: auto !important;
+    margin-left: 150px !important;
+  }
+  
+  #page2 .aboutmrs-img {
+    width: 350px !important;
+    height: auto !important;
+    margin-right: 150px;
+  }
+  
+  #page2 .mrkims-img {
+    width: 500px !important;
+    height: auto !important;
+  }
+  
+  #page2 .mrskims-img {
+    width: 500px !important;
+    height: auto !important;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #page2 .text-wrapper {
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #page2 .text-wrapper img:first-child {
+    height: auto;
+    max-width: 12rem;
+    margin-bottom: 0;
+  }
+  
+  #page2 .text-wrapper img:nth-child(2) {
+    width: 20rem;
+    height: auto;
+    margin-bottom: 0;
+  }
+  
+  #page2 .text-wrapper img:nth-child(3) {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
+  
+  #page2 .pickone-wrapper img {
+    width: 5rem;
+    height: auto;
+    margin-bottom: 0;
+  }
+  
+  #page2 .misterkim-img {
+    width: 12rem !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  #page2 .mrskim-img {
+    width: 10rem !important;
+    height: auto !important;
+    margin-right: 0;
+    margin-top: 0 !important;
+  }
+  
+  #page2 .aboutmr-img {
+    width: 10rem !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    margin-top: 0.5rem !important;
+  }
+  
+  #page2 .aboutmrs-img {
+    width: 10rem !important;
+    height: auto !important;
+    margin-right: 0;
+    margin-top: 0.5rem !important;
+  }
+  
+  #page2 .mrkims-img {
+    width: 12rem !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  
+  #page2 .mrskims-img {
+    width: 12rem !important;
+    height: auto !important;
+    margin-left: 0;
+    margin-top: 0 !important;
+  }
+  
+  #page2 .kim-row-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  #page2 .misterkim-col,
+  #page2 .mrskim-col {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  #page2 .kims-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  #page2 .kims-row img {
+    margin: 0;
+  }
+  
+  #page2 .yellow-img-wrapper,
+  #page2 .pink-img-wrapper,
+  #page2 .orange-img-wrapper {
+    margin-top: 1rem;
+  }
+  
+  #page2 .yellow-img,
+  #page2 .pink-img,
+  #page2 .orange-img {
+    width: 5rem !important;
+    height: auto !important;
+  }
+  
+  #page2 .hello-img {
+    margin-left: 1rem;
+    height: 20px !important;
+    width: auto !important;
+  }
+  
+  #page2 .sorry-img {
+    margin-left: 1rem;
+    height: 20px !important;
+    width: auto !important;
+  }
+  
+  #page2 .cong-img {
+    right: 1rem;
+    height: 20px !important;
+    width: auto !important;
+  }
+  
+  #page2 .who-img {
+    left: 1rem;
+    height: 20px !important;
+    width: auto !important;
+  }
+  
+  .number-image {
+    width: 5rem;
+    height: auto;
+  }
+  
+  .slideshow-container {
+    width: 90vw !important;
+    height: 60vh !important;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #page2 .text-wrapper {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  
+  #page2 .misterkim-img {
+    width: 250px !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  
+  #page2 .mrskim-img {
+    width: 200px !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  
+  #page2 .aboutmr-img {
+    width: 200px !important;
+    height: auto !important;
+    margin: 0.5rem 0 !important;
+  }
+  
+  #page2 .aboutmrs-img {
+    width: 200px !important;
+    height: auto !important;
+    margin: 0.5rem 0 !important;
+  }
+  
+  #page2 .mrkims-img {
+    width: 250px !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  
+  #page2 .mrskims-img {
+    width: 250px !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+  
+  #page2 .kim-row-wrapper {
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  #page2 .kims-row {
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  #page2 .yellow-img,
+  #page2 .pink-img,
+  #page2 .orange-img {
+    width: 4rem !important;
+    height: auto !important;
+  }
+  
+  #page2 .hello-img {
+    margin-left: 0.5rem;
+    height: 18px !important;
+    width: auto !important;
+  }
+  
+  #page2 .sorry-img {
+    margin-left: 0.5rem;
+    height: 18px !important;
+    width: auto !important;
+  }
+  
+  #page2 .cong-img {
+    right: 0.5rem;
+    height: 18px !important;
+    width: auto !important;
+  }
+  
+  #page2 .who-img {
+    left: 0.5rem;
+    height: 18px !important;
+    width: auto !important;
+  }
+  
+  .number-image {
+    width: 80px;
+    height: auto;
+  }
+  
+  .slideshow-container {
+    width: 95vw !important;
+    height: 50vh !important;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ✅ 숫자 이미지 배치 */
+.number-images-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 160px;
+}
+
+.number-image {
+  width: 150px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* ✅ 슬라이드쇼 */
+.slideshow-container {
+  width: 95vw !important;
+  height: 80vh !important;
+  position: relative;
+  overflow: visible;
+  margin-bottom: 140px;
+  flex-shrink: 0 !important;
+  align-self: stretch !important;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  min-width: 100% !important;
+  min-height: 100% !important;
+}
